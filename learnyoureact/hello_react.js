@@ -19,7 +19,10 @@ require('babel/register')({
 });
 
 app.use('/', (req, res) => {
-	res.render('index-hello', '');
+	res.render('index-hello', {data: [
+    {'title' : 'Shopping', 'detail': process.argv[3]},
+    {'title': 'Hair cut', 'detail': process.argv[4]}
+  ]});
 });
 
 app.listen(app.get('port'), () => {
