@@ -23,8 +23,8 @@ require('babel-core/register');
 let TodoBox = require(path.join(__dirname, 'views', 'index-hello.jsx'));
 
 let data = [
-  {'title' : 'Shopping', 'detail': process.argv[3]},
-  {'title': 'Hair cut', 'detail': process.argv[4]}
+  {title : 'Shopping', detail: process.argv[3]},
+  {title: 'Hair cut', detail: process.argv[4]}
 ];
 
 app.use('/bundle.js', (req, res) => {
